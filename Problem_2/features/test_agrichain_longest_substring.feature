@@ -16,9 +16,9 @@ Feature: Longest Substring Without Repeating Characters
 
     Examples:
       |string| result |
-      |abcabcbb | abc |
-      |  aaaaa   |a|
-      |  abcdef       |abcdef |
+      |abcabcbb | 3 |
+      |  aaaaa   |1|
+      |  abcdef       |6 |
 
 
   Scenario: Enter a string with all unique characters
