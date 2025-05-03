@@ -1,5 +1,5 @@
 Test Case ID: TC001
-Title: Validate longest substring for various inputs
+Title: Validate longest substring length for various inputs
 Preconditions: User is on the longest substring web page
 Test Steps:
   1. Enter the string "abcabcbb"
@@ -8,9 +8,9 @@ Test Steps:
   4. Observe the result
   5. Repeat steps 1–4 for "aaaaa" and "abcdef"
 Expected Result:
-  - For "abcabcbb", result should be "abc"
-  - For "aaaaa", result should be "a"
-  - For "abcdef", result should be "abcdef"
+  - For "abcabcbb", length should be 3
+  - For "aaaaa", length should be 1
+  - For "abcdef", length should be 6
 Actual Result: [To be filled]
 Status: [Pass/Fail]
 Remarks:
@@ -18,13 +18,13 @@ Remarks:
 ------------------------------------------------------------
 
 Test Case ID: TC002
-Title: Validate longest substring for a unique string
+Title: Validate longest substring length for a unique string
 Preconditions: User is on the longest substring web page
 Test Steps:
   1. Enter the string "abcdef"
   2. Click on the submit button
   3. Switch to the new tab
-Expected Result: "abcdef"
+Expected Result: 6
 Actual Result:
 Status:
 Remarks:
@@ -32,13 +32,13 @@ Remarks:
 ------------------------------------------------------------
 
 Test Case ID: TC003
-Title: Validate longest substring for identical characters
+Title: Validate longest substring length for identical characters
 Preconditions: User is on the longest substring web page
 Test Steps:
   1. Enter the string "aaaaa"
   2. Click on the submit button
   3. Switch to the new tab
-Expected Result: "a"
+Expected Result: 1
 Actual Result:
 Status:
 Remarks:
@@ -65,7 +65,7 @@ Test Steps:
   1. Enter the string "   abcabcbb   "
   2. Click submit
   3. Switch to new tab
-Expected Result: Result should be "abc" (whitespace trimmed before processing)
+Expected Result: Length should be 3 (whitespace should be trimmed)
 Actual Result:
 Status:
 Remarks:
@@ -79,7 +79,7 @@ Test Steps:
   1. Enter the string "ab#c$d%"
   2. Click submit
   3. Switch to new tab
-Expected Result: Longest substring without repeating characters should consider special characters, e.g. "ab#c$d%"
+Expected Result: Length should be 7 (all characters are unique)
 Actual Result:
 Status:
 Remarks:
@@ -93,7 +93,7 @@ Test Steps:
   1. Enter the string "aAbBcC"
   2. Click submit
   3. Switch to new tab
-Expected Result: Result should be "aAbBcC" if case-sensitive, or shorter if case-insensitive
+Expected Result: 6 (assuming case-sensitive)
 Actual Result:
 Status:
 Remarks:
@@ -107,7 +107,21 @@ Test Steps:
   1. Enter the string "123123456"
   2. Click submit
   3. Switch to new tab
-Expected Result: Longest substring should be "123456"
+Expected Result: 6 (substring: "123456")
+Actual Result:
+Status:
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC009
+Title: Validate partial repeats (e.g., "abbc")
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "abbc"
+  2. Click submit
+  3. Switch to new tab
+Expected Result: 2 (substring: "ab" or "bc")
 Actual Result:
 Status:
 Remarks:
