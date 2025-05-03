@@ -25,13 +25,13 @@ Feature: Longest Substring Without Repeating Characters
     When I enter the string "abcdef"
     And I click on the submit button
     And I switch to the new window
-    Then I should see the result "abcdef"
+    Then I should see the result "6"
 
   Scenario: Enter a string with all identical characters
     When I enter the string "aaaaa"
     And I click on the submit button
     And I switch to the new window
-    Then I should see the result "a"
+    Then I should see the result "1"
 
   Scenario: Submit button is disabled until text is entered
     When I do not enter any text in the input field
