@@ -3,7 +3,7 @@ public class Main {
     static int solve(String s) {
         HashMap < Character, Integer > map = new HashMap < Character, Integer > ();
 
-        int l = 0,
+        int l = 0;
         int r = 0;
         int n = s.length();
         int len = 0;
