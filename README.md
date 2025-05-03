@@ -25,4 +25,5 @@ Before running the tests, ensure you have the following installed:
    git clone https://github.com/rushikeshshelke1542/AgriChain-QA-assignment.git
    cd Problem_2
    pip install -r requirements.txt
+   pytest spec_files -v
 
