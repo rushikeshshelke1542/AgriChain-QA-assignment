@@ -1,0 +1,113 @@
+Test Case ID: TC001
+Title: Validate longest substring for various inputs
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "abcabcbb"
+  2. Click on the submit button
+  3. Switch to the new tab
+  4. Observe the result
+  5. Repeat steps 1–4 for "aaaaa" and "abcdef"
+Expected Result:
+  - For "abcabcbb", result should be "abc"
+  - For "aaaaa", result should be "a"
+  - For "abcdef", result should be "abcdef"
+Actual Result: [To be filled]
+Status: [Pass/Fail]
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC002
+Title: Validate longest substring for a unique string
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "abcdef"
+  2. Click on the submit button
+  3. Switch to the new tab
+Expected Result: "abcdef"
+Actual Result:
+Status:
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC003
+Title: Validate longest substring for identical characters
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "aaaaa"
+  2. Click on the submit button
+  3. Switch to the new tab
+Expected Result: "a"
+Actual Result:
+Status:
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC004
+Title: Submit button should be disabled when input is empty
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Do not enter anything in the text field
+  2. Observe the submit button
+Expected Result: The submit button should be disabled
+Actual Result:
+Status:
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC005
+Title: Validate trimming of leading and trailing spaces
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "   abcabcbb   "
+  2. Click submit
+  3. Switch to new tab
+Expected Result: Result should be "abc" (whitespace trimmed before processing)
+Actual Result:
+Status:
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC006
+Title: Validate special characters in input
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "ab#c$d%"
+  2. Click submit
+  3. Switch to new tab
+Expected Result: Longest substring without repeating characters should consider special characters, e.g. "ab#c$d%"
+Actual Result:
+Status:
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC007
+Title: Validate case sensitivity in longest substring
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "aAbBcC"
+  2. Click submit
+  3. Switch to new tab
+Expected Result: Result should be "aAbBcC" if case-sensitive, or shorter if case-insensitive
+Actual Result:
+Status:
+Remarks:
+
+------------------------------------------------------------
+
+Test Case ID: TC008
+Title: Validate numeric input
+Preconditions: User is on the longest substring web page
+Test Steps:
+  1. Enter the string "123123456"
+  2. Click submit
+  3. Switch to new tab
+Expected Result: Longest substring should be "123456"
+Actual Result:
+Status:
+Remarks:
