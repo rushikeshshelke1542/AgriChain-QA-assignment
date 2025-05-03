@@ -1,36 +1,28 @@
 import java.util.*;
-
 public class Main {
-    static String solve(String s) {
-        HashMap<Character, Integer> mpp = new HashMap<>();
+    static int solve(String s) {
+        HashMap < Character, Integer > map = new HashMap < Character, Integer > ();
 
-        int left = 0, right = 0;
+        int l = 0,
+        int r = 0;
         int n = s.length();
-        int maxLen = 0;
-        int maxStart = 0;
-
-        while (right < n) {
-            char currentChar = s.charAt(right);
-
-            if (mpp.containsKey(currentChar)) {
-                left = Math.max(mpp.get(currentChar) + 1, left);
+        int len = 0;
+        while (r < n) {
+            if (map.containsKey(s.charAt(r))) {
+            l = Math.max(map.get(s.charAt(r)) + 1, l);
             }
 
-            mpp.put(currentChar, right);
+            map.put(s.charAt(r), r);
 
-            if (right - left + 1 > maxLen) {
-                maxLen = right - left + 1;
-                maxStart = left;
-            }
-
-            right++;
+            len = Math.max(len, r - l + 1);
+            r++;
         }
-
-        return s.substring(maxStart, maxStart + maxLen);
+        return len;
     }
 
     public static void main(String args[]) {
-        String str = "abccd";
-        System.out.println("The longest substring without repeating characters is: " + solve(str));
+        String str = "abcdde";
+        System.out.println(solve(str));
+
     }
 }
